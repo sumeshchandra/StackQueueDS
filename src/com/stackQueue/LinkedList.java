@@ -139,7 +139,40 @@ public class LinkedList<T> {
 		}
 		return count;
 	}
+	
+	 /**
+     * Method to find the first element in the stack
+     *
+     * @return first element
+     */
+    public T peek() {
+        Node<T> first = head;
+        //return(first == null) ? null : first.data;
 
+        if (first == null) {
+            return null;
+        } else {
+            return (first.data);
+        }
+    }
+
+    /**
+     * Method to remove top most element from Stack
+     */
+    public int pop() {
+        if (head != null) {
+            System.out.println("Pop Operation...");
+            int size = 0;
+            int temp = (int) head.data;
+            head = head.next;
+            size--;
+            return temp;
+        } else {
+            System.out.println("Empty list");
+            return -1;
+        }
+    }
+    
 	/**
 	 * This method prints all the elements Here Traverse till the null and print
 	 * till the last node's next element is null
