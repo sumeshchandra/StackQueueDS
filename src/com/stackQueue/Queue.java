@@ -11,6 +11,13 @@ public class Queue<T> {
 	public void enqueue(T data) {
 		numberList.add(data);
 	}
+	
+	/**
+     * This method is used to remove elements from queue
+     */
+    public int dequeue() {
+        return numberList.pop();
+    }
 
 	/**
 	 * This method prints all the elements Here Traverse till the null and print
